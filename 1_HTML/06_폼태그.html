@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼 태그</title>
+  </head>
+  <body>
+    <h2>폼 태그의 기본 구조</h2>
+    <!-- 폼 태그 : 사용자들에게 입력을 받는 부분 -> 서버에 전송 (검색, 회원가입, 로그인)-->
+
+    <h3>검색 폼</h3>
+    <form action="" method="get">
+      <!--
+        action : 경로 (어느 서버에 전송할 것인지)
+        method_post : 노출x, 검색 주소에 보이지 않음 (보안)
+        method_get : 노출o, 주로 검색에 사용
+      -->
+      <label for="search">검색할 내용 : </label>
+      <input type="text" name="keyword" id="search" />
+      <input type="submit" value="검색" />
+    </form>
+
+    <h3>회원가입 폼</h3>
+  </body>
+</html>
