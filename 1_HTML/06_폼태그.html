@@ -13,7 +13,7 @@
     <form action="" method="get">
       <!--
         action : 경로 (어느 서버에 전송할 것인지)
-        method_post : 노출x, 검색 주소에 보이지 않음 (보안)
+        method_post : 노출x, 검색 주소에 보이지 않음 (보안-ex.로그인)
         method_get : 노출o, 주로 검색에 사용
       -->
       <label for="search">검색할 내용 : </label>
@@ -22,5 +22,126 @@
     </form>
 
     <h3>회원가입 폼</h3>
+    <form action="" method="post">
+      <fieldset>
+        <legend>회원정보</legend>
+        <label for="id">아이디 : </label>
+        <input
+          type="text"
+          name="id"
+          id="id"
+          placeholder="아이디"
+          required
+        /><br />
+        <!--
+          name : 키값
+          placeholder : 입력창에 뜨고 쓸때는 지워짐 
+          required : 필수 입력값 
+        -->
+        <label for="pwd">패스워드 : </label>
+        <input
+          type="password"
+          name="pwd"
+          id="pwd"
+          placeholder="비밀번호"
+          autofocus
+        />
+        <!--
+          패스워드 input type : password 안보이게
+          autofocus : 자동으로 먼저 포커스로 잡힘
+        -->
+      </fieldset>
+      <fieldset>
+        <legend>배송정보</legend>
+        <label for="name">수령인 : </label>
+        <input type="text" name="name" id="name" /><br /><br />
+        <label for="addr">주소 : </label>
+        <input type="text" name="addr" id="addr" value="서울 강남구" readonly />
+      </fieldset>
+      <input type="submit" value="회원가입" />
+      <input type="reset" value="초기화" />
+      <input type="button" value="버튼" onclick="alert('버튼 클릭')" />
+      <!--
+        event : 사용자의 행동 (javascript 코드만 들어감 - ex. alert)
+      -->
+    </form>
+
+    <h3>type="radio|checkbox"</h3>
+    <form action="">
+      <fieldset>
+        <legend>성별</legend>
+        <label> <input type="radio" name="gender" value="M" /> 남자 </label>
+        <br />
+        <label>
+          <input type="radio" name="gender" value="F" checked /> 여자
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>관심사</legend>
+        <label>
+          <input type="checkbox" name="interest" value="movie" /> 영화</label
+        >
+        <label>
+          <input type="checkbox" name="interest" value="exercise" /> 운동</label
+        >
+        <label>
+          <input type="checkbox" name="interest" value="game" /> 게임
+        </label>
+        <label>
+          <input type="checkbox" name="interest" value="drink" /> 술
+        </label>
+      </fieldset>
+      <input type="submit" />
+    </form>
+
+    <h3>type="hidden|file"</h3>
+    <form action="">
+      <input type="hidden" name="hiddenValue" value="1234" />
+      <input type="file" multiple accept="image/*, .mp4" />
+      <!--
+        multiple : 파일 다중 선택 가능
+        accept : 파일 선택시 보여지는 파일들 종류 지정 (.jpg, .mp4 ..)
+      -->
+      <input type="submit" />
+    </form>
+
+    <h3>type="datetime-local|week|month|date|time"</h3>
+    <form action="">
+      datetime-local : <input type="datetime-local" /><br />
+      week : <input type="week" /><br />
+      month : <input type="month" /><br />
+      date : <input type="date" /><br />
+      time : <input type="time" />
+    </form>
+
+    <h3>type="email|search|number|range|color"</h3>
+    <form action="">
+      email : <input type="email" /><br />
+      search : <input type="search" /><br />
+      number : <input type="number" /><br />
+      range : <input type="range" /><br />
+      color : <input type="color" /><br />
+    </form>
+
+    <h2>select|textarea|button</h2>
+    <form action="">
+      국적 :
+      <select name="national">
+        <optgroup label="아시아">
+          <option value="kr">한국</option>
+          <option value="ch">중국</option>
+          <option value="jp">일본</option>
+        </optgroup>
+        <optgroup label="기타">
+          <option value="us">미국</option>
+          <option value="fr">프랑스</option>
+        </optgroup>
+        <option selected>----</option>
+        <!-- option selected : 순서 상관없이 제일 먼저 보이게 설정 --></select
+      ><br />
+      <textarea style="resize: none"></textarea>
+      <!-- reset, button -->
+      <button type="submit">전송</button>
+    </form>
   </body>
 </html>
