@@ -1,0 +1,51 @@
+* {
+  background-color: indianred;
+}
+#form {
+  border: 2px solid white;
+  height: 330px;
+  width: 280px;
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 3%;
+}
+#img {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  left: 90px;
+  top: 20px;
+  background-image: url("../../resources/bao_480.jpg");
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+#name {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.space {
+  border: 2px solid white;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  box-sizing: border-box;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  margin: 15px;
+}
+#github:hover {
+  background-color: white;
+  color: indianred;
+}
+#instagram:hover {
+  background-color: white;
+  color: indianred;
+}
