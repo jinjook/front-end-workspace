@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*스크롤 없애기 위해*/
+} /* 여백 전혀 없이 시작 */
+body {
+  background-color: indianred;
+  background: linear-gradient(purple, pink);
+  height: 100vh;
+  padding: 20px; /*프로필 카드를 아래로 20px 내리기 위해*/
+}
+.profile-card {
+  text-align: center; /*부모 태그에 기재-> 전체 적용(이미지도 적용됨) */
+  width: 320px;
+  border: 2px solid white;
+  position: relative;
+  margin: auto; /* auto: 좌우로 정중앙 맞춰줌 */
+  /*position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%); -> 해당 방법으로도 가운데 조정 가능*/
+
+  border-radius: 5%;
+}
+/*.profile-image {
+  background-image: url(../../resources/bao_480.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px auto;
+}*/
+
+/* .profile-card img: profile-card 밑 img태그 */
+.profile-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 20px;
+  /* 가운데 정렬은 부모태그에서 text-align으로 적용 */
+}
+.profile-card h2 {
+  color: white;
+  margin-top: 10px;
+}
+.profile-card a {
+  border: 2px solid white;
+  display: block;
+  margin: 15px; /* profile-card의 height값 없애버려도 됨 */
+  /* 
+  height: 40px;
+  line-height: 40px; 
+  */
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.profile-card a:hover {
+  background-color: white;
+  color: indianred;
+}
