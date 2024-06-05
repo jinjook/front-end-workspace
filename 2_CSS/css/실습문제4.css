@@ -1,0 +1,38 @@
+.container {
+  background: linear-gradient(45deg, black, blue);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.square {
+  width: 4px;
+  height: 20px;
+  background-color: white;
+  margin: 1px;
+  border-radius: 18%;
+  animation: squareAni 0.4s linear infinite alternate;
+}
+
+.square:nth-child(2),
+.square:nth-child(6) {
+  animation-delay: 0.2s;
+}
+
+.square:nth-child(3),
+.square:nth-child(5) {
+  animation-delay: 0.3s;
+}
+
+.square:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+@keyframes squareAni {
+  0% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(2);
+  }
+}
