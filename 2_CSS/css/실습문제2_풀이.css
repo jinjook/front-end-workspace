@@ -8,6 +8,10 @@ header {
   align-items: center;
   /*line-height:80px도 가능*/
 }
+header > * {
+  width: 33.33%;
+  display: flex;
+}
 
 header h1 {
   font-size: 2rem;
@@ -15,10 +19,12 @@ header h1 {
   margin-left: 15px;
   /* 전체 padding으로 주면 nav 영역도 줄어들어서 margin으로 간격 띄우기 */
 }
-
+header form {
+  justify-content: center;
+}
 header nav {
+  justify-content: end;
   height: 100%;
-  display: flex;
 }
 /*a태그도 글씨(Heading 1,2,3..)의 부모태그*/
 header nav a {
