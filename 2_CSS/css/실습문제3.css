@@ -1,0 +1,55 @@
+div {
+  background-color: rgba(00, 00, 00, 50%);
+}
+
+header {
+  background-image: url(../../resources/background.jpg);
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 70px;
+  height: 100vh;
+  width: 300px;
+}
+header h1 {
+  font-size: 5rem;
+  border-bottom: 1.5px solid white;
+  color: white;
+  padding-bottom: 10px;
+}
+header nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+header nav a {
+  font-size: 1.3rem;
+  line-height: 1.5;
+  text-decoration: underline;
+  color: white;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 300px;
+}
+section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 10px;
+}
+section img {
+  width: 60%;
+  align-self: center;
+}
+section p {
+  padding: 10px;
+  line-height: 1.5;
+}
