@@ -1,0 +1,77 @@
+header {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+  /*line-height:80px도 가능*/
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 15px;
+  /* 전체 padding으로 주면 nav 영역도 줄어들어서 margin으로 간격 띄우기 */
+}
+
+header nav {
+  height: 100%;
+  display: flex;
+}
+/*a태그도 글씨(Heading 1,2,3..)의 부모태그*/
+header nav a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+header nav a:hover {
+  background-color: black;
+  color: white;
+}
+
+section {
+  height: 100vh; /*vh:view-height*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+#section1 {
+  background-color: red;
+}
+#section2 {
+  background-color: blueviolet;
+}
+#section3 {
+  background-color: yellow;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+section p {
+  line-height: 1.5;
+  width: 70%;
+}
+
+.top {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: black;
+  color: white;
+  width: 50px;
+  height: 50px;
+  /* inline은 width/height값이 x
+  position:fixed 적용하면 가능 */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
