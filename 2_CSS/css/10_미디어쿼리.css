@@ -1,0 +1,16 @@
+body {
+  background: pink;
+  /*작은사이즈부터 시작하는것 추천(모바일사이즈)*/
+}
+/* 700px 이상 적용 */
+@media screen and (min-width: 700px) {
+  body {
+    background: rgb(255, 120, 142);
+  }
+}
+/* 1000px 이상 적용 */
+@media screen and (min-width: 1000px) {
+  body {
+    background: rgb(255, 45, 80);
+  }
+}
