@@ -13,10 +13,16 @@
      -->
     <script>
       //const id = prompt("아이디 입력");
-      if (id == "admin") {
+      const id = "admin";
+      if (id === "admin") {
         console.log("관리자입니다");
-      } else {
-        console.log("관리자가 아닙니다");
+      }
+
+      if (id === "admin") console.log("관리자입니다"); // 한줄일때만 허용 가능
+
+      switch (id) {
+        case "admin":
+          console.log("관리자입니다");
       }
     </script>
 
@@ -27,6 +33,8 @@
     <script>
       //const test1 = prompt("필기 시험 성적");
       //const test2 = prompt("실기 시험 성적");
+      const test1 = 95;
+      const test2 = 20;
       if (test1 >= 80 && test2 >= 80) {
         console.log("합격");
       } else {
@@ -39,7 +47,8 @@
      -->
     <script>
       //const num = prompt("정수 입력");
-      if (num >= 10 && num <= 20) {
+      const num = 15;
+      if (num > 10 && num < 20) {
         console.log("10과 20의 사이에 있습니다");
       } else {
         console.log("10과 20의 사이에 있지 않습니다");
@@ -50,7 +59,8 @@
         Q4. 나이(age)가 65세 이상이거나 8세 미만이면 '입장료는 무료입니다'를 출력, 그렇지 않다면 '입장료는 10,000원입니다'를 console에 출력하시오.
       -->
     <script>
-      //const age = prompt("나이 입력");
+      // const age = prompt("나이 입력");
+      const age = 50;
       if (age >= 65 || age < 8) {
         console.log("입장료는 무료입니다");
       } else {
@@ -64,15 +74,63 @@
             예) 12월은 겨울입니다.
      -->
     <script>
-      const month = prompt("월 입력");
-      if (month >= 3 && month <= 5) {
+      // if -> 중첩 가능, 주의!! 가급적으로 중첩 쓰지 않는 것 추천
+
+      /* 자바스크립트 내에서 여러줄 주석 걸 때 :
+      const month = Number(prompt("월 입력"));
+       if (month >= 3 && month <= 5) {
         console.log("봄");
       } else if (month >= 6 && month <= 8) {
         console.log("여름");
       } else if (month >= 9 && month <= 11) {
         console.log("가을");
-      } else {
+      } else if (month === 12 || (1 <= month && month <= 2)) {
+        // 대신 string ->  number로 수정해야함
         console.log("겨울");
+      }
+      */
+
+      const month = prompt("월 입력");
+      let sesasn = "";
+      if (1 <= month && month <= 12) {
+        if (month >= 3 && month <= 5) {
+          season = "봄";
+        } else if (month >= 6 && month <= 8) {
+          season = "여름";
+        } else if (month >= 9 && month <= 11) {
+          season = "가을";
+        } else {
+          season = "겨울";
+        }
+        console.log(`${month}월은 ${season}입니다.`);
+      }
+
+      // switch
+      switch (month) {
+        case 3:
+        case 4:
+        case 5:
+          seaseon = "봄";
+          break;
+        case 6:
+        case 7:
+        case 8:
+          seaseon = "여름";
+          break;
+        case 9:
+        case 10:
+        case 11:
+          seaseon = "가을";
+          break;
+        case 12:
+        case 1:
+        case 2:
+          seaseon = "겨울";
+          break;
+      }
+      if (season !== "") {
+        // 시즌이 비는 경우 출력 차단
+        console.log(`${month}월은 ${season}입니다.`);
       }
     </script>
   </body>
