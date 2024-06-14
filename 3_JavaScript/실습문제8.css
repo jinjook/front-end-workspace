@@ -1,0 +1,22 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  border: 1px solid gray;
+  padding: 5px;
+  width: 1000px;
+}
+
+form span {
+  display: block;
+  color: gray;
+  margin-left: 12px;
+}
+form div {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
