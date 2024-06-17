@@ -24,11 +24,11 @@
         if (i % 3 !== 0) {
           continue;
         }
+        const total = [i].reduce((acc, value) => {
+          return acc + value;
+        });
+        console.log(total);
       }
-
-      //arr =
-      //const result = arr.reduce {(acc, value) => {return acc + value;}}
-      //console.log(result);
     </script>
 
     <!-- Q3. 문자열의 문자들을 하나씩 출력하세요 -->
@@ -52,7 +52,12 @@
     -->
     <script>
       console.log("---Q5---");
-      if ()
+      for (let num = 1; num < 11; num++) {
+        if (i % 2) {
+          continue;
+        }
+        console.log(num);
+      }
     </script>
 
     <!-- Q6. 배열 안의 데이터를 모두 2배로 만들어서 출력하세요 -->
@@ -102,6 +107,16 @@
       const a2 = [12, 0, 2, 5, 4];
       const b2 = [0, 2, 3, 12, 8];
       const c2 = [];
+
+      for (const index in a2) {
+        console.log(a2[index]);
+      }
+
+      for (let i = 0; i < 5; i++) {
+        b2.includes(i);
+      }
+
+      // c2.splice(index, 0, arr);
     </script>
 
     <!-- Q10. 2차원 배열에는 3명의 학생의 4과목 성적이 들어 있습니다. 각 학생들의 합계와 평균을 출력하세요 -->
