@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // div root 제외 모든 것은 자바스크립트로
+      let count = 0;
+      const setCount = () => {
+        count++;
+
+        // 실행할때마다 랜더링이 필요
+        const h1 = React.createElement("h1", null, "Total Clicks : " + count);
+        const button = React.createElement(
+          "button",
+          { onClick: setCount },
+          "Click!"
+        );
+        const container = React.createElement("div", null, h1, button);
+
+        ReactDOM.render(container, root); //(집어넣을 것, 어디다가)
+      };
+
+      const root = document.querySelector("#root");
+      const h1 = React.createElement("h1", null, "Total Clicks : " + count); //("태그", "속성/값", 텍스트)
+      const button = React.createElement(
+        "button",
+        { onClick: setCount },
+        "Click!"
+      );
+      // rendering은 하나만 가능 -> 추가하려면 무조건 하나의 태그가 더 필요
+      const container = React.createElement("div", null, h1, button);
+
+      // html에 넣기
+      ReactDOM.render(container, root); //(집어넣을 것, 어디다가)
+    </script>
+  </body>
+</html>

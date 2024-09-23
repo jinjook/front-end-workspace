@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vanilla</title>
+  </head>
+  <body>
+    <h1>Total Clicks : <span>0</span></h1>
+    <button onclick="setCount()">Click!</button>
+
+    <script>
+      const span = document.querySelector("span");
+
+      /* let count = 0;
+      function setCount(){
+        count++;
+        span.innerHTML = count;
+      }*/
+
+      // 화살표 함수 사용
+      const setCount = () => {
+        span.innerHTML = parseInt(span.innerHTML) + 1;
+      };
+    </script>
+  </body>
+</html>
