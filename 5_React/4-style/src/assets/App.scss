@@ -1,0 +1,30 @@
+/* 변수 지정 가능 - 값만 담아냄 */
+$bg-color: indianred;
+$color: white;
+$padding: 20px;
+
+/* 믹스인 - 속성 담아냄 (include로 호출) */
+@mixin text-center {
+    text-align: center;
+}
+
+/* 상속 - extend로 호출 */
+.border {
+    border: 10px solid wheat;
+}
+
+.scss-style {
+    background-color: $bg-color;
+    color: $color;
+    padding: $padding;
+    @include text-center;
+    @extend .border;
+
+    /* 중첩 */
+    h1 {
+        color: maroon;
+        &:hover {
+            color: wheat;
+        }
+    }
+}
