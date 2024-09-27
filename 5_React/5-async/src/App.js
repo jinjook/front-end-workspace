@@ -1,4 +1,4 @@
-import { getFetchThen, getAwait } from "./api/movie";
+import { getFetchThen, getAwait, getAxios } from "./api/movie";
 import { useEffect, useState } from "react";
 // app component를 호출하는 순간 list 보이게
 
@@ -16,9 +16,15 @@ const App = () => {
     setData(result);
   };
 
+  const loadAxios = async() => {
+    const result = await getAxios();
+    setData(result);
+  }
+
   useEffect(() => {
-    //loadFetchThen();
-    loadAwait();
+    // loadFetchThen();
+    // loadAwait();
+    loadAxios();
   }, []);
 
   return (
